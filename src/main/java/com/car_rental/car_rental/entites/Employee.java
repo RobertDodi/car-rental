@@ -14,6 +14,11 @@ public class Employee {
     private Long id;
     private String firstName;
     private String lastName;
+    @Column(unique = true, nullable = false)
+    private String username;
+    @Column( nullable = false)
+    private String password;
+    private Boolean active;
     @Enumerated(EnumType.STRING)
     private Position position;
     @JoinColumn(name = "branch_id")

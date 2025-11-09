@@ -16,8 +16,12 @@ public class Customer {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
+    @Column(unique = true, nullable = false)
     private String email;
     private String location;
     @OneToMany(mappedBy = "customer")
     private List<Reservation> reservations;
+    @JoinColumn()
+    @ManyToOne
+    private Rental rental;
 }

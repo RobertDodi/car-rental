@@ -5,7 +5,9 @@ import jakarta.persistence.*;
 import jdk.jfr.Enabled;
 import lombok.Data;
 
-@Enabled
+import java.util.List;
+
+@Entity
 @Table(name = "cars")
 @Data
 public class Car {
@@ -20,8 +22,9 @@ public class Car {
     private Long mileage;
     private Status status;
     private Long amount;
-    @OneToMany
-    @JoinColumn(name = "reservation_id")
-    private Reservation reservation;
-
+    @ManyToOne
+    @JoinColumn(name = "branch_id")
+    private Branch branch;
+    @OneToMany(mappedBy = "car")
+    private List<Reservation> reservations;
 }

@@ -15,7 +15,6 @@ public class Refund {
     @ManyToOne
     @JoinColumn(name = "employee_id")
     private Employee employee;
-    @Column(name = "date_of_return")
     private LocalDate dateOfReturn;
     @OneToOne
     @JoinColumn(name = "reservation_id")

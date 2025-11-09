@@ -13,11 +13,11 @@ import java.util.List;
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String brand;
     private String model;
     private String body;
-    private Long year;
+    private Integer year;
     private String color;
     private Long mileage;
     private Status status;

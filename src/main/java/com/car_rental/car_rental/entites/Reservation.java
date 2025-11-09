@@ -1,5 +1,6 @@
 package com.car_rental.car_rental.entites;
 
+import com.car_rental.car_rental.static_data.ReservationStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -12,7 +13,6 @@ public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "date_of_booking")
     private LocalDate dateOfBooking;
     @ManyToOne
     @JoinColumn(name = "client_id")
@@ -20,12 +20,14 @@ public class Reservation {
     @ManyToOne
     @JoinColumn(name = "car_id")
     private Car car;
-    @Column(name = "date_from")
     private LocalDate dateFrom;
-    @Column(name = "date to")
     private LocalDate dateTo;
     @ManyToOne
     @JoinColumn(name = "return_branch_id")
     private Branch returnBranch;
+    @ManyToOne
+    @JoinColumn(name = "Loan_branch_id")
+    private Branch loanBranch;
     private Integer amount;
+    private ReservationStatus status;
 }

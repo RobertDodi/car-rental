@@ -17,7 +17,6 @@ public class Loan {
     @ManyToOne
     @JoinColumn(name = "employee_id")
     private Employee employee;
-    @Column(name = "date_of_rental")
     private LocalDate dateOfRental;
     @OneToOne
     @JoinColumn(name = "reservation_id")

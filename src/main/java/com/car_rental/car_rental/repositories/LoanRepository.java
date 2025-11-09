@@ -1,4 +1,7 @@
 package com.car_rental.car_rental.repositories;
 
-public interface LoanRepository {
+import com.car_rental.car_rental.entites.Loan;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LoanRepository extends JpaRepository<Loan, Long> {
 }

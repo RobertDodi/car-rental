@@ -3,6 +3,8 @@ import com.car_rental.car_rental.static_data.Position;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Table(name = "employees")
 @Data

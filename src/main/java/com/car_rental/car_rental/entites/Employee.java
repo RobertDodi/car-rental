@@ -1,5 +1,4 @@
 package com.car_rental.car_rental.entites;
-
 import com.car_rental.car_rental.static_data.Position;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -13,6 +12,9 @@ public class Employee {
     private Long id;
     private String firstName;
     private String lastName;
+    @Enumerated(EnumType.STRING)
     private Position position;
-    //private Branch branch;
+    @JoinColumn(name = "branch_id")
+    @ManyToOne
+    private Branch branch;
 }

@@ -17,4 +17,5 @@ public class Employee {
     @JoinColumn(name = "branch_id")
     @ManyToOne
     private Branch branch;
+
 }

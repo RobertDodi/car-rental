@@ -22,6 +22,6 @@ public class Car {
     private Long amount;
     @OneToMany
     @JoinColumn(name = "reservation_id")
-    private
+    private Reservation reservation;
 
 }

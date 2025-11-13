@@ -29,5 +29,6 @@ public class Reservation {
     @JoinColumn(name = "Loan_branch_id")
     private Branch loanBranch;
     private Integer amount;
+    @Enumerated(EnumType.STRING)
     private ReservationStatus status;
 }

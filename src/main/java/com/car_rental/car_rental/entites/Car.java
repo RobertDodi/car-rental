@@ -20,6 +20,7 @@ public class Car {
     private Integer year;
     private String color;
     private Long mileage;
+    @Enumerated(EnumType.STRING)
     private Status status;
     private Long amount;
     @ManyToOne

@@ -41,13 +41,13 @@ private BranchService branchService;
         branchService.deleteBranch(id);
         return ResponseEntity.noContent().build();
     }
-    @GetMapping("/city/{city}")
-    public ResponseEntity<List<Branch>> findBranchesByCity(@PathVariable String city) {
+    @GetMapping("/city")
+    public ResponseEntity<List<Branch>> findBranchesByCity(@RequestParam String city) {
         List<Branch> branches = branchService.findBranchesByCity(city);
         return ResponseEntity.ok(branches);
     }
-    @GetMapping("/name/{name}")
-    public ResponseEntity<List<Branch>> findBranchesByName(@PathVariable String name) {
+    @GetMapping("/name")
+    public ResponseEntity<List<Branch>> findBranchesByName(@RequestParam String name) {
         List<Branch> branches = branchService.findBranchesByName(name);
         return ResponseEntity.ok(branches);
     }

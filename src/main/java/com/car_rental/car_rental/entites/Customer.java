@@ -21,6 +21,7 @@ public class Customer {
     private String location;
     @OneToMany(mappedBy = "customer")
     private List<Reservation> reservations;
+    @Column(name = "rental_id")
     @JoinColumn()
     @ManyToOne
     private Rental rental;

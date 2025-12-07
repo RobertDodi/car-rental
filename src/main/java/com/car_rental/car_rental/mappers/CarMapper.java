@@ -36,13 +36,6 @@ public class CarMapper {
         car.setMileage(dto.getMileage());
         car.setStatus(dto.getStatus());
         car.setAmount(dto.getAmount());
-        if (dto.getBranchId() != null) {
-            Branch b = new Branch();
-            b.setId(dto.getBranchId());
-            car.setBranch(b);
-        } else {
-            car.setBranch(null);
-        }
         return car;
     }
 }

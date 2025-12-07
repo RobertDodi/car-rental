@@ -1,10 +1,8 @@
-package com.car_rental.car_rental.controller;
+package com.car_rental.car_rental.controllers;
 
 import com.car_rental.car_rental.Services.CustomerService;
 import com.car_rental.car_rental.entites.Customer;
-import com.car_rental.car_rental.entites.Rental;
 import com.car_rental.car_rental.entites.Reservation;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

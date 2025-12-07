@@ -28,7 +28,7 @@ public class Reservation {
     @ManyToOne
     @JoinColumn(name = "Loan_branch_id")
     private Branch loanBranch;
-    private Integer amount;
+    private Double amount;
     @Enumerated(EnumType.STRING)
     private ReservationStatus status;
 }

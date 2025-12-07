@@ -19,6 +19,6 @@ public class Refund {
     @OneToOne
     @JoinColumn(name = "reservation_id")
     private Reservation reservation;
-    private Long surcharge;
+    private Double surcharge;
     private String comment;
 }

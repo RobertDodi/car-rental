@@ -41,7 +41,7 @@ public class CarDto {
 
     @NotNull(message = "amount is required")
     @Positive(message = "amount must be > 0")
-    private Long amount;
+    private Double amount;
 
     @NotNull
     private Long branchId;

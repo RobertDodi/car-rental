@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface LoanRepository extends JpaRepository<Loan, Long> {
     List<Loan> findByEmployeeId(Long id);
+
+    List<Loan> findAllByEmployee_Branch_Id(Long employeeBranchId);
 }

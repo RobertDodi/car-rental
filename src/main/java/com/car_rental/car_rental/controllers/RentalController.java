@@ -32,5 +32,10 @@ public class RentalController {
     public Rental updateRental(@RequestBody Rental rental) {
         return rentalService.saveRental(rental);
     }
+
+    @GetMapping("/name")
+    public List<Rental> getRentalsByName(@RequestParam String name) {
+        return rentalService.findAllByName(name);
+    }
 }
 

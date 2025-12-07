@@ -22,7 +22,7 @@ public class Car {
     private Long mileage;
     @Enumerated(EnumType.STRING)
     private Status status;
-    private Long amount;
+    private Double amount;
     @ManyToOne
     @JoinColumn(name = "branch_id")
     private Branch branch;

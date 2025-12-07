@@ -42,7 +42,7 @@ public class EmployeeService {
                 return (Employee) principal;
             }
         }
-        return null;
+        throw new RuntimeException("No logged in employee");
     }
 
     public List<Employee> findByBranchId(Long branchId, Position position){

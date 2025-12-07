@@ -1,4 +1,4 @@
-package com.car_rental.car_rental.controller;
+package com.car_rental.car_rental.controllers;
 
 import com.car_rental.car_rental.Services.BranchService;
 import com.car_rental.car_rental.entites.Branch;

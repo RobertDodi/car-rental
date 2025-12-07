@@ -27,10 +27,9 @@ public class CarService {
         }
     }
 
-    public CarDto findById(Long id) {
-        Car car = carRepository.findById(id)
+    public Car findById(Long id) {
+        return carRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Car not found with id: " + id));
-        return carMapper.toDto(car);
     }
 
     public List<CarDto> findAll() {

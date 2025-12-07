@@ -11,4 +11,5 @@ import java.util.List;
 public interface RefundRepository extends JpaRepository<Refund, Long> {
     List<Refund> findByReservationId(Long reservationId);
 
+    List<Refund> findByEmployee_Branch_Id(Long branch_id);
 }

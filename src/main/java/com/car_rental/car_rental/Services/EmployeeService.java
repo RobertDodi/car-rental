@@ -82,5 +82,4 @@ public class EmployeeService {
         employee.setBranch(branch);
         return employeeRepository.save(employee);
     }
-
 }

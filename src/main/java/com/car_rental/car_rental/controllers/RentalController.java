@@ -1,13 +1,13 @@
 package com.car_rental.car_rental.controllers;
 
-import com.car_rental.car_rental.Services.RentalService;
+import com.car_rental.car_rental.services.RentalService;
 import com.car_rental.car_rental.entites.Rental;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping
+@RequestMapping("/api/rental")
 @RequiredArgsConstructor
 
 public class RentalController {

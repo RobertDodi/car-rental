@@ -1,4 +1,4 @@
-package com.car_rental.car_rental.Services;
+package com.car_rental.car_rental.services;
 import com.car_rental.car_rental.entites.Branch;
 import com.car_rental.car_rental.entites.Car;
 import com.car_rental.car_rental.entites.Customer;
@@ -9,7 +9,6 @@ import com.car_rental.car_rental.static_data.ReservationStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.Duration;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.List;

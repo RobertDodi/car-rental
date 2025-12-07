@@ -1,4 +1,4 @@
-package com.car_rental.car_rental.Services;
+package com.car_rental.car_rental.services;
 
 import com.car_rental.car_rental.entites.Rental;
 import com.car_rental.car_rental.repositories.RentalRepository;
@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

@@ -19,10 +19,9 @@ public class Customer {
     @Column(unique = true, nullable = false)
     private String email;
     private String location;
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(mappedBy = "client")
     private List<Reservation> reservations;
-    @Column(name = "rental_id")
-    @JoinColumn()
+    @JoinColumn(name = "rental_id")
     @ManyToOne
     private Rental rental;
 }

@@ -1,4 +1,4 @@
-package com.car_rental.car_rental.Services;
+package com.car_rental.car_rental.services;
 
 import com.car_rental.car_rental.entites.Employee;
 import com.car_rental.car_rental.entites.Loan;
@@ -6,6 +6,8 @@ import com.car_rental.car_rental.entites.Reservation;
 import com.car_rental.car_rental.models.LoanDto;
 import com.car_rental.car_rental.repositories.LoanRepository;
 import com.car_rental.car_rental.repositories.ReservationRepository;
+import com.car_rental.car_rental.services.EmployeeService;
+import com.car_rental.car_rental.services.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

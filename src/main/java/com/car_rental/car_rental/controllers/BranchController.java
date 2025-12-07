@@ -1,6 +1,6 @@
 package com.car_rental.car_rental.controllers;
 
-import com.car_rental.car_rental.Services.BranchService;
+import com.car_rental.car_rental.services.BranchService;
 import com.car_rental.car_rental.entites.Branch;
 import com.car_rental.car_rental.models.BranchDto;
 import lombok.RequiredArgsConstructor;

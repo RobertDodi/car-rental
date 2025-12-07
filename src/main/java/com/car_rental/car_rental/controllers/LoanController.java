@@ -1,6 +1,6 @@
 package com.car_rental.car_rental.controllers;
 
-import com.car_rental.car_rental.Services.LoanService;
+import com.car_rental.car_rental.services.LoanService;
 import com.car_rental.car_rental.entites.Loan;
 import com.car_rental.car_rental.models.LoanDto;
 import org.springframework.beans.factory.annotation.Autowired;

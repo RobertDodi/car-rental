@@ -1,6 +1,6 @@
 package com.car_rental.car_rental.controllers;
 
-import com.car_rental.car_rental.Services.CustomerService;
+import com.car_rental.car_rental.services.CustomerService;
 import com.car_rental.car_rental.entites.Customer;
 import com.car_rental.car_rental.entites.Reservation;
 import org.springframework.http.HttpStatus;

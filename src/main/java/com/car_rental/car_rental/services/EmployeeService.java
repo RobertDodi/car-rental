@@ -6,6 +6,7 @@ import com.car_rental.car_rental.entites.Employee;
 import com.car_rental.car_rental.models.EmployeeDto;
 import com.car_rental.car_rental.repositories.EmployeeRepository;
 import com.car_rental.car_rental.static_data.Position;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -81,5 +82,16 @@ public class EmployeeService {
         Branch branch = branchService.findById(employeeDto.getBranchId());
         employee.setBranch(branch);
         return employeeRepository.save(employee);
+    }
+    @PostConstruct
+    public void init() {
+        if (!employeeRepository.existsByUsername("admin")) {
+            Employee employee = new Employee();
+            employee.setUsername("admin");
+            employee.setPassword(passwordEncoder.encode("admin"));
+            employee.setPosition(Position.ROLE_ADMIN);
+            employee.setActive(true);
+            employeeRepository.save(employee);
+        }
     }
 }

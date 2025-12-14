@@ -11,7 +11,6 @@ public class AuthSession {
         if (authentication == null || !authentication.isAuthenticated()) {
             return false;
         }
-
         Object principal = authentication.getPrincipal();
         return principal instanceof UserDetails;
     }

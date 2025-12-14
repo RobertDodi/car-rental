@@ -16,4 +16,5 @@ public interface EmployeeRepository extends JpaRepository<Employee,Long> {
     List<Employee> findByBranch_Id(Long branchId);
 
     List<Employee> findAllByBranch_IdAndPosition(Long branchId, Position position);
+
 }

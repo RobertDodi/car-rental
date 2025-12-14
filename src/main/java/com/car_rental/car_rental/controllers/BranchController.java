@@ -14,7 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 
 public class BranchController {
-private BranchService branchService;
+private final BranchService branchService;
 
     @PostMapping
     public ResponseEntity<Branch> createBranch(@RequestBody BranchDto branch) {

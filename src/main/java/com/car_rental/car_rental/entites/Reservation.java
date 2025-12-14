@@ -1,6 +1,7 @@
 package com.car_rental.car_rental.entites;
 
 import com.car_rental.car_rental.static_data.ReservationStatus;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -16,9 +17,11 @@ public class Reservation {
     private LocalDate dateOfBooking;
     @ManyToOne
     @JoinColumn(name = "client_id")
+    @JsonBackReference
     private Customer client;
     @ManyToOne
     @JoinColumn(name = "car_id")
+    @JsonBackReference
     private Car car;
     private LocalDate dateFrom;
     private LocalDate dateTo;
@@ -27,6 +30,7 @@ public class Reservation {
     private Branch returnBranch;
     @ManyToOne
     @JoinColumn(name = "Loan_branch_id")
+
     private Branch loanBranch;
     private Double amount;
     @Enumerated(EnumType.STRING)

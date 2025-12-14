@@ -1,10 +1,12 @@
 package com.car_rental.car_rental.entites;
 
 import com.car_rental.car_rental.static_data.Status;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jdk.jfr.Enabled;
 import lombok.Data;
-
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.util.List;
 
 @Entity
@@ -27,5 +29,6 @@ public class Car {
     @JoinColumn(name = "branch_id")
     private Branch branch;
     @OneToMany(mappedBy = "car")
+    @JsonIgnore
     private List<Reservation> reservations;
 }

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
@@ -27,6 +27,7 @@ public class Employee implements UserDetails{
     private Position position;
     @JoinColumn(name = "branch_id")
     @ManyToOne
+
     private Branch branch;
 
 

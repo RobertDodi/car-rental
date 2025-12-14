@@ -1,5 +1,6 @@
 package com.car_rental.car_rental.entites;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
